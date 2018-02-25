@@ -11,9 +11,9 @@ use pocketmine\Player;
 class CmdSnooper extends PluginBase {
 	public $snoopers = [];
 	
-	public function onEnable() {
+	public function onEnable(): void {
 		@mkdir($this->getDataFolder());
-		$this->getLogger()->info("Enabled! Ready to snoop >:D");
+		$this->getLogger()->info("§aSocial spy has been enabled. §bLet the magic begin. >:D");
 		$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
 		$this->cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML, array(
 	  	"Console.Logger" => "true",
@@ -21,15 +21,15 @@ class CmdSnooper extends PluginBase {
 	}
 	
 	 public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool {			
-		if(strtolower($command->getName()) == "snoop") {
+		if(strtolower($command->getName()) == "socialspy" or strtolower($command->getName()) == "ss") {
 		 	if($sender instanceof Player) {
-				if($sender->hasPermission("snoop.command")) {
+				if($sender->hasPermission("socialspy.command")) {
 					if(!isset($this->snoopers[$sender->getName()])) {
-						$sender->sendMessage("§0[§eSky§aSnoop§0]§a> §fYou have entered snoop mode");
+						$sender->sendMessage("§0[§6Void§bSS§0]§a> §bYou have entered snoop mode");
 						$this->snoopers[$sender->getName()] = $sender;
 						return true;
 					} else {
-						$sender->sendMessage("§0[§eSky§aSnoop§0]§a> You have left snoop mode");
+						$sender->sendMessage("§0[§6Void§bSS§0]§a> §cYou have left snoop mode");
 						unset($this->snoopers[$sender->getName()]);
 						return true;
 					}
