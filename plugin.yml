@@ -8,7 +8,7 @@ description: §eSnoop on players
 commands:
   socialspy:
     description: Enter Social spy
-     aliases: ["ss"]
+    aliases: ["ss"]
 permissions:
    socialspy.command:
     default: op
