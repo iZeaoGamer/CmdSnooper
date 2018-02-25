@@ -6,9 +6,10 @@ author: Crafter20162017
 description: §eSnoop on players
 
 commands:
-  snoop:
-    description: Enter snoop mode
+  socialspy:
+    description: Enter Social spy
+     aliases: ["ss"]
 permissions:
-   snoop.command:
+   socialspy.command:
     default: op
  
