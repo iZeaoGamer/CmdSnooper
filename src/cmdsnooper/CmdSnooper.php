@@ -32,6 +32,9 @@ class CmdSnooper extends PluginBase {
 						$sender->sendMessage("§0[§6Void§bSS§0]§a> §cYou have left SocialSpy mode");
 						unset($this->snoopers[$sender->getName()]);
 						return true;
+						}
+       						$sender->sendMessage(TextFormat::RED . "This command is for Staff only!");
+       						return true;
 					}
 				}
 			}
