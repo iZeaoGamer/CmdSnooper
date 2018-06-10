@@ -39,5 +39,6 @@ class CmdSnooper extends PluginBase {
 					}
 				}
 			}
-		}
+		return true;
+}
 	}
