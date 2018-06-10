@@ -34,7 +34,7 @@ class CmdSnooper extends PluginBase {
 						return true;
 						}
 				} else {
-       						$sender->sendMessage("This command is for Staff only!");
+       						$sender->sendMessage("§cThis command is for Staff only!");
        						return true;
 					}
 				}
