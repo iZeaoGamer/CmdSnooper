@@ -33,6 +33,7 @@ class CmdSnooper extends PluginBase {
 						unset($this->snoopers[$sender->getName()]);
 						return true;
 						}
+				} else {
        						$sender->sendMessage(TextFormat::RED . "This command is for Staff only!");
        						return true;
 					}
