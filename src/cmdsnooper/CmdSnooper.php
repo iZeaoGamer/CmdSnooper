@@ -25,11 +25,11 @@ class CmdSnooper extends PluginBase {
 		 	if($sender instanceof Player) {
 				if($sender->hasPermission("socialspy.command")) {
 					if(!isset($this->snoopers[$sender->getName()])) {
-						$sender->sendMessage("§0[§6Void§bSS§0]§a> §bYou have entered socialSpy mode");
+						$sender->sendMessage("§7[§6Void§bSS§7] §bYou have entered socialSpy mode");
 						$this->snoopers[$sender->getName()] = $sender;
 						return true;
 					} else {
-						$sender->sendMessage("§0[§6Void§bSS§0]§a> §cYou have left SocialSpy mode");
+						$sender->sendMessage("§7[§6Void§bSS§0]§7> §cYou have left SocialSpy mode");
 						unset($this->snoopers[$sender->getName()]);
 						return true;
 						}
