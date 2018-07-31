@@ -1,7 +1,7 @@
 name: SocialSpy
 main: cmdsnooper\CmdSnooper
 version: 2.1.0
-api: 3.0.0-ALPHA12
+api: [3.0.0, 4.0.0]
 author: Crafter20162017
 description: §eSnoop on players
 
