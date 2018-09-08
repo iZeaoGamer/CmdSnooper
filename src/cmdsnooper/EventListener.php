@@ -23,10 +23,10 @@ class EventListener implements Listener {
 		
 		if($this->getPlugin()->cfg->get("Console.Logger") == "true") {
 			if($msg[0] == "/") {
-				if(stripos($msg, "login") || stripos($msg, "log") || stripos($msg, "reg") || stripos($msg, "register")) {
-					$this->getPlugin()->getLogger()->info($sender->getName() . "> hidden for security reasons");	
+				if(stripos($msg, "login") || stripos($msg, "reg") || stripos($msg, "register")) {
+					$this->getPlugin()->getLogger()->info($sender->getName() . "§c: hidden for security reasons");	
 				} else {
-					$this->getPlugin()->getLogger()->info($sender->getName() . "> " . $msg);
+					$this->getPlugin()->getLogger()->info($sender->getName() . "§a: §b " . $msg);
 				}
 				
 			}
@@ -35,10 +35,10 @@ class EventListener implements Listener {
 			if(!empty($this->getPlugin()->snoopers)) {
 				foreach($this->getPlugin()->snoopers as $snooper) {
 					 if($msg[0] == "/") {
-						if(stripos($msg, "login") || stripos($msg, "log") || stripos($msg, "reg") || stripos($msg, "register")) {
-							$snooper->sendMessage($sender->getName() . "> hidden for security reasons");	
+						if(stripos($msg, "login") || stripos($msg, "reg") || stripos($msg, "register")) {
+							$snooper->sendMessage("§7[§6Social§eSpy§7] §5" . $sender->getName() . "§c: hidden for security reasons");	
 						} else {
-							$snooper->sendMessage($sender->getName() . "> " . $msg);
+							$snooper->sendMessage("§7[§6SocialSpy§7] §5" . $sender->getName() . "§a: §b" . $msg);
 						}
 						
 					}
