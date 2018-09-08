@@ -38,7 +38,7 @@ class EventListener implements Listener {
 						if(stripos($msg, "login") || stripos($msg, "reg") || stripos($msg, "register")) {
 							$snooper->sendMessage("§7[§6Social§eSpy§7] §5" . $sender->getName() . "§c: hidden for security reasons");	
 						} else {
-							$snooper->sendMessage("§7[§6SocialSpy§7] §5" . $sender->getName() . "§a: §b" . $msg);
+							$snooper->sendMessage("§7[§6Social§eSpy§7] §5" . $sender->getName() . "§a: §b" . $msg);
 						}
 						
 					}
